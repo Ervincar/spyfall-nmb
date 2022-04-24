@@ -7,7 +7,9 @@ import {
   Card,
   CardGrid,
   Button,
+  Div,
 } from "@vkontakte/vkui";
+
 
 let DrawCards = (listOfPlayers) => {
   const [currentCard, setCurrentCard] = useState(
@@ -25,6 +27,7 @@ let DrawCards = (listOfPlayers) => {
       onClick={onClick}
       style={{
         color: "white",
+        minWidth: "80vw",
         backgroundColor:
           currentCard == "Шпион"
             ? "#A70000"
@@ -53,19 +56,22 @@ let DrawCards = (listOfPlayers) => {
 const PreGame = (props) => (
   <Panel id={props.id}>
     <PanelHeader left={<PanelHeaderBack onClick={props.go} data-to="home" />}>
-      Предыгра
+      Раздача карточек
     </PanelHeader>
-    <CardGrid size="l" style={{ paddingTop: 10, paddingBottom: 20 }}>
-      <DrawCards listOfPlayers={props.listOfPlayers} go={props.go} />
-    </CardGrid>
-    <Button
-      size="l"
-      mode="primary"
-      onClick={props.startInGame}
-      data-to={props.numberOfPlayers}
-    >
-      Продолжить
-    </Button>
+    <Div style={{ display: "flex", justifyContent:"center", alignItems:"center", minHeight:"90vh", flexDirection: "column" }}>
+      <CardGrid size="l">
+        <DrawCards listOfPlayers={props.listOfPlayers} go={props.go} />
+      </CardGrid>
+      <Button
+        size="l"
+        mode="primary"
+        onClick={props.startInGame}
+        data-to={props.numberOfPlayers}
+        style={{marginTop: "20px"}}
+      >
+        Продолжить
+      </Button>
+    </Div>
   </Panel>
 );
 

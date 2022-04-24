@@ -106,7 +106,7 @@ const App = () => {
 	}
 
 	const startInGame = e => {
-		setTimeLeft(numberOfPlayers * 6)
+		setTimeLeft(numberOfPlayers * 60)
 		setActivePanel("ingame")
 	}
 

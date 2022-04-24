@@ -2,21 +2,25 @@ import React from 'react';
 
 import { Panel, Button, Group, Div, CardGrid, Card } from '@vkontakte/vkui';
 
+import "./InGame.css"
 
 
 const InGame = ({ id, go, endgame, timeLeft }) => (
     <Panel id={id}>
         <Group>
             <Div className='InGame'>
-                <Div>Игра началась!</Div>
+                <Div className='title'>Игра началась!</Div>
+                <Div className='title'>Осталось секунд</Div>
                 <CardGrid size="l" style={{ paddingTop: 10, paddingBottom: 10 }}>
                     <Card mode="shadow">
-                        <div
+                        <div className='card'
                             style={{
-                                height: 50,
+                                height: 150,
                                 display: "flex",
                                 justifyContent: "center",
                                 alignItems: "center",
+                                fontSize: 40,
+                                minWidth: "85vw",
                             }}
                         >
                             {timeLeft}

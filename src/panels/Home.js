@@ -14,7 +14,8 @@ const Home = ({ id, go, startGame}) => (
 		<Group>
 			<Div className='main'>
 				<img src={Logo} width={150} height={150} />
-				<Div>Добро пожаловать</Div>
+				<Div style={{fontSize: 30}}>Добро пожаловать</Div>
+				<Div>Количество игроков</Div>
 				<PlayersNumberForm startGame={startGame} />
 				<Button className='button' size="m" mode="secondary" onClick={go} data-to="locations-list">
 					Список локаций

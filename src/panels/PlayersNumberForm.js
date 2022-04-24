@@ -10,7 +10,7 @@ const PlayersNumberForm = ({startGame}) => {
   
     return (
     <FormLayout>
-        <FormItem top="Количество игроков">
+        <FormItem>
             <Slider
             step={1}
             min={3}
