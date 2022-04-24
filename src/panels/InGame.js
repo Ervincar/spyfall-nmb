@@ -4,7 +4,7 @@ import { Panel, Button, Group, Div, CardGrid, Card } from '@vkontakte/vkui';
 
 
 
-const InGame = ({ id, go, timeLeft }) => (
+const InGame = ({ id, go, endgame, timeLeft }) => (
     <Panel id={id}>
         <Group>
             <Div className='InGame'>
@@ -24,8 +24,8 @@ const InGame = ({ id, go, timeLeft }) => (
                     </Card>
                 </CardGrid>
 
-                <Button className='button' size="m" mode="secondary" onClick={go} data-to="locations-list">
-                    Список локаций
+                <Button className='button' size="m" mode="primary" appearance='negative' onClick={endgame}>
+                    Закончить игру
                 </Button>
             </Div>
         </Group>

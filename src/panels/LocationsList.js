@@ -16,7 +16,7 @@ const LocationCards = (props) => {
   const locationsItems = [];
   locationsList.forEach((location) => {
     locationsItems.push(
-      <Card mode="shadow">
+      <Card mode="shadow" key={locationsItems.length}>
         <div
           style={{
             height: 50,
